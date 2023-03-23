@@ -6,18 +6,20 @@
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="#" />
+    <link rel="stylesheet" href="" />
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css" />
   </head>
   <body>
-    <main class="container">
-      <h1>Job Scrapper</h1>
-      <h4>What job do you want</h4>
-      <form action="/search">
-        <input type="text" name="keyword" placeholder="Write one keyword please" />
-        <button>Search</button>
-      </form>
-    </main>
-    <script src="#" async defer></script>
+    <h1>Job Scrapper</h1>
+    <h4>What job do you want</h4>
+    <p>{{ keyword }}</p>
+    {% for job in jobs %}
+    <div>
+      <span>⭐{{ job['title'] }}</span>
+      <span>⭐{{ job['company'] }}</span>
+      <span>⭐{{ job['link'] }}</span>
+    </div>
+    {% endfor%}
+    <script src="" async defer></script>
   </body>
 </html>
